@@ -30,52 +30,31 @@
          <!-- Begin page -->
          <div class="accountbg" style="background: url('/images/front_images/bg.jpg'); background-size: cover !important;background-position: center;"></div>
 
-        <div class="account-pages mt-5 pt-5">
+         <div class="account-pages mt-5 pt-5">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-md-8 col-lg-5 col-xl-4">
+                    <div class="col-md-8 col-lg-6 col-xl-4">
                         <div class="card">
                             <div class="card-body">
                                 <div class="text-center mt-4">
                                     <div class="mb-3">
-                                      
                                         <a href=""><img src="{{url('images/front_images/logo.png') }}" height="30" alt="logo"></a>
                                     </div>
                                 </div>
                                 <div class="p-3">
-                                    <h4 class="font-size-18 mt-2 text-center">Welcome Back !</h4>
-                                    <p class="text-muted text-center mb-4">Sign in to continue to Relm Report.</p>
-                                    @include('front.flash_message')
+                                    <h4 class="font-size-18 mt-2 text-center">Reset Password</h4>
+                                    <p class="text-muted text-center mb-4">Enter your Email and instructions will be sent to you!</p>
     
-                                    <form class="form-horizontal" id="login_form" action="{{ url('/user-login') }}" method="post">@csrf
-    
+                                    <form class="form-horizontal" action="index.html">
+
                                         <div class="mb-3">
-                                            <label class="form-label" for="username">Email</label>
-                                            <input type="text" class="form-control"type="email" name="email" placeholder="Enter email">
+                                            <label for="useremail" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="useremail" name="email" placeholder="Enter email">
                                         </div>
-    
+
                                         <div class="mb-3">
-                                            <label class="form-label" for="userpassword">Password</label>
-                                            <input type="password" class="form-control" id="userpassword" type="password" name="password" placeholder="Password" placeholder="Enter password">
-                                        </div>
-    
-                                        <div class="row mt-4">
-                                            <div class="col-sm-6">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="customControlInline">
-                                                    <label class="form-check-label" for="customControlInline">
-                                                        Remember me
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6 text-end">
-                                                <button class="btn btn-primary w-md waves-effect waves-light" type="submit">Log In</button>
-                                            </div>
-                                        </div>
-    
-                                        <div class="mb-0 row">
-                                            <div class="col-12 mt-4">
-                                                <a href="{{ url('forgot-password') }}" class="text-muted"><i class="mdi mdi-lock"></i> Forgot your password?</a>
+                                            <div class="text-end">
+                                                <button class="btn btn-primary w-md waves-effect waves-light" type="submit">Reset</button>
                                             </div>
                                         </div>
                                     </form>
@@ -85,8 +64,8 @@
                             </div>
                         </div>
                         <div class="mt-5 text-center position-relative">
-                            <p class="text-white">Don't have an account ? <a href="" class="fw-bold text-primary"> Contact Admin </a> </p>
-                            <p class="text-white"><script>document.write(new Date().getFullYear())</script> © Vistechy. Crafted with <i class="mdi mdi-heart text-danger"></i> by Steco</p>
+                            <p class="text-white">Remember It ? <a href="pages-login.html" class="font-weight-bold text-primary"> Sign In Here </a> </p>
+                            <p class="text-white"><script>document.write(new Date().getFullYear())</script> © Admiria. Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesbrand</p>
                         </div>
     
                     </div>

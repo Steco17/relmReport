@@ -64,14 +64,12 @@ Route::prefix('/admin')->namespace('Admin')->group(function(){
 
 });
 Route::namespace('Front')->group(function(){
-    Route::get('/','IndexController@index');
+    //Route::get('/','IndexController@index');
 
         // Login/Register page
-    Route::get('/login-register',['as'=>'login','uses'=>'UsersController@loginRegister']);
+    Route::get('/',['as'=>'login','uses'=>'UsersController@loginRegister']);
     //Longin Users
     Route::post('/user-login','UsersController@loginUser');
-    //Register Users
-    Route::post('/user-register','UsersController@registerUser');
     // Logout User
     Route::get('/logout','UsersController@logoutUser');
     Route::get('/contact_us','IndexController@contact');
