@@ -21,70 +21,36 @@
 
 		<!-- framework - css include -->
 		<link rel="stylesheet" type="text/css" href="{{ url('css/front_css/bootstrap.min.css') }}">
-
+		<!-- C3 Chart css -->
+		<link href="{{ url('libs/c3/c3.min.css') }}" rel="stylesheet" type="text/css">
 		<!-- icon - css include -->
-		<link rel="stylesheet" type="text/css" href="{{ url('css/front_css/fontawesome.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url('css/front_css/app.min.css') }}">
 
 		<!-- animation - css include -->
-		<link rel="stylesheet" type="text/css" href="{{ url('css/front_css/aos.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url('css/front_css/icons.min.css') }}">
 		<link rel="stylesheet" type="text/css" href="{{ url('css/front_css/animate.css') }}">
-
-		<!-- carousel - css include -->
-		<link rel="stylesheet" type="text/css" href="{{ url('css/front_css/slick.css') }}">
-		<link rel="stylesheet" type="text/css" href="{{ url('css/front_css/slick-theme.css') }}">
-
-		<!-- popup - css include -->
-		<link rel="stylesheet" type="text/css" href="{{ url('css/front_css/magnific-popup.css') }}">
-
-		<!-- select options - css include -->
-		<link rel="stylesheet" type="text/css" href="{{ url('css/front_css/nice-select.css') }}">
-
-		<!-- pricing range - css include -->
-		<link rel="stylesheet" type="text/css" href="{{ url('css/front_css/jquery-ui.css') }}">
-
-		<!-- custom - css include -->
 		<link rel="stylesheet" type="text/css" href="{{ url('css/front_css/style.css') }}">
 
 	</head>
 
 
-	<body>
+	<body data-sidebar="dark">
 
 
-		<!-- backtotop - start -->
-		<div id="thetop"></div>
-		<div class="backtotop">
-			<a href="#" class="scroll">
-				<i class="far fa-arrow-up"></i>
-			</a>
-		</div>
-		<!-- backtotop - end -->
-
-		<!-- preloader - start -->
-		<div class="preloader">
-			<div class="animation_preloader">
-				<div class="spinner"></div>
-				<p class="text-center">Loading</p>
-			</div>
-			<div class="loader">
-				<div class="row vh-100">
-					<div class="col-3 loader_section section-left">
-						<div class="bg"></div>
-					</div>
-					<div class="col-3 loader_section section-left">
-						<div class="bg"></div>
-					</div>
-					<div class="col-3 loader_section section-right">
-						<div class="bg"></div>
-					</div>
-					<div class="col-3 loader_section section-right">
-						<div class="bg"></div>
-					</div>
+		<div id="preloader">
+			<div id="status">
+				<div class="spinner">
 				</div>
 			</div>
 		</div>
+
 		<!-- preloader - end -->
 
+		<div id="layout-wrapper">
+
+			<!-- topbar_section - start
+		================================================== -->
+		@include('layouts.front_layout.top_header')
 
 		<!-- header_section - start
 		================================================== -->
@@ -110,51 +76,16 @@
 		<!-- footer_section - end
 		================================================== -->
 
+		</div>
 
 		<!-- fraimwork - jquery include -->
-		<script src="{{ url('js/front_js/jquery-3.5.1.min.js') }}"></script>
-		<script src="{{ url('js/front_js/popper.min.js') }}"></script>
-		<script src="{{ url('js/front_js/bootstrap.min.js') }}"></script>
+		<script src="{{ url('libs/jquery/jquery.min.js') }}"></script>
+		<script src="{{ url('libs/bootstrap/js/bootstrap.bundle.min.j') }}"></script>
+		<script src="{{ url('libs/metismenu/metisMenu.min.js') }}"></script>
 
 		<!-- animation - jquery include -->
-		<script src="{{ url('js/front_js/aos.js') }}"></script>
-		<script src="{{ url('js/front_js/parallaxie.js') }}"></script>
-
-		<!-- carousel - jquery include -->
-		<script src="{{ url('js/front_js/slick.min.js') }}"></script>
-
-		<!-- popup - jquery include -->
-		<script src="{{ url('js/front_js/magnific-popup.min.js') }}"></script>
-
-		<!-- select ontions - jquery include -->
-		<script src="{{ url('js/front_js/nice-select.min.js') }}"></script>
-
-		<!-- isotope - jquery include -->
-        <script src="{{ url('js/front_js/isotope.pkgd.js') }}"></script>
-        <script src="{{ url('js/front_js/imagesloaded.pkgd.min.js') }}"></script>
-        <script src="{{ url('js/front_js/masonry.pkgd.min.js') }}"></script>
-
-		<!-- google map - jquery include -->
-		<script src="https:/maps.googleapis.com/maps/api/js?key=AIzaSyDk2HrmqE4sWSei0XdKGbOMOHN3Mm2Bf-M&ver=2.1.6"></script>
-        <script src="{{ url('js/front_js/gmaps.min.js') }}"></script>
-
-		<!-- pricing range - jquery include -->
-		<script src="{{ url('js/front_js/jquery-ui.js') }}"></script>
-
-		<!-- counter - jquery include -->
-		<script src="{{ url('js/front_js/waypoint.js') }}"></script>
-		<script src="{{ url('js/front_js/counterup.min.js') }}"></script>
-
-		<!-- contact form - jquery include -->
-        <script src="{{ url('js/front_js/validate.js') }}"></script>
-
-		<!-- mobile menu - jquery include -->
-        <script src="{{ url('js/front_js/mCustomScrollbar.js') }}"></script>
-
-		<!-- custom - jquery include -->
-		<script src="{{ url('js/front_js/custom.js') }}"></script>
-		<script src="{{ url('js/front_js/front_script.js') }}"></script>
-
+		<script src="{{ url('libs/simplebar/simplebar.min.js') }}"></script>
+		<script src="{{ url('libs/node-waves/waves.min.js') }}"></script>
 
 	</body>
 </html>
