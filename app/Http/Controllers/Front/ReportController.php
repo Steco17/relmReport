@@ -9,6 +9,6 @@ class ReportController extends Controller
 {
     public function dailyReport()
     {
-
+        return view('front.report.new_report');
     }
 }

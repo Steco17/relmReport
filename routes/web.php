@@ -64,7 +64,7 @@ Route::namespace('Front')->group(function(){
         Route::match(['GET','POST'],'/update-profile','UsersController@updateProfile');
 
         //report section
-        Route::match(['GET','POST'],'/daily-report','UsersController@dailyReport');
+        Route::match(['GET','POST'],'/daily-report','ReportController@dailyReport');
 
     });
 

@@ -22,7 +22,7 @@
                 <li class="menu-title">Reports</li>
 
                 <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                    <a href="{{ url('/daily-report') }}" class="has-arrow waves-effect">
                         <i class="mdi mdi-buffer"></i>
                         <span>New Report</span>
                     </a>
