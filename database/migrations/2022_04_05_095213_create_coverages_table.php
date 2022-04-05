@@ -14,8 +14,8 @@ class CreateCoveragesTable extends Migration
     public function up()
     {
         Schema::create('coverages', function (Blueprint $table) {
-            $table->id();
-            $table->bigIncrements('report_id');
+            $table->bigIncrements('id');
+            $table->integer('report_id');
             $table->text("building");
             $table->text("call_nature");
             $table->longText("follow_up");

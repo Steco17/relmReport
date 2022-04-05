@@ -15,7 +15,7 @@ class CreateFollowupsTable extends Migration
     {
         Schema::create('followups', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigIncrements('report_id');
+            $table->integer('report_id');
             $table->text("building");
             $table->text("shift");
             $table->longText("why");
