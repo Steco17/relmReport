@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 
-        <title>@if(!@empty($meta_title)){{ $meta_title }} @else Mfuko - Send and receive your packag @endif</title>
+        <title>@if(!@empty($meta_title)){{ $meta_title }} @else Relm Report - Dashboard @endif</title>
         @if (!empty($meta_description))
             <meta name="description" content="{{ $meta_description }}">
         @endif
@@ -17,7 +17,7 @@
 
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-		<link rel="shortcut icon" href="{{ asset('images/front_images/logo/favourite_icon.png' ) }}">
+		<link rel="shortcut icon" href="{{ asset('images/front_images/favicon.png' ) }}">
 
 		<!-- framework - css include -->
 		<link rel="stylesheet" type="text/css" href="{{ url('css/front_css/bootstrap.min.css') }}">
@@ -48,16 +48,15 @@
 
 		<div id="layout-wrapper">
 
-			<!-- topbar_section - start
-		================================================== -->
-		@include('layouts.front_layout.top_header')
+        <!-- header_section - start
+         ================================================== -->
+        @include('layouts.front_layout.front_header')
+        <!-- header_section - end
+        ================================================== -->
 
-		<!-- header_section - start
+		<!-- topbar_section - start
 		================================================== -->
-		@include('layouts.front_layout.front_header')
-		<!-- header_section - end
-		================================================== -->
-
+		@include('layouts.front_layout.front_sidebar')
 
 		<!-- main body - start
 		================================================== -->
@@ -67,7 +66,7 @@
 		<!-- main body - end
 		================================================== -->
 
-
+        @include('layouts.front_layout.right_sidebar')
 		<!-- footer_section - start
 		================================================== -->
 
@@ -80,12 +79,25 @@
 
 		<!-- fraimwork - jquery include -->
 		<script src="{{ url('libs/jquery/jquery.min.js') }}"></script>
-		<script src="{{ url('libs/bootstrap/js/bootstrap.bundle.min.j') }}"></script>
+		<script src="{{ url('libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 		<script src="{{ url('libs/metismenu/metisMenu.min.js') }}"></script>
 
 		<!-- animation - jquery include -->
 		<script src="{{ url('libs/simplebar/simplebar.min.js') }}"></script>
 		<script src="{{ url('libs/node-waves/waves.min.js') }}"></script>
+
+        <!-- Peity chart-->
+        <script src="{{ url('libs/peity/jquery.peity.min.js') }}"></script>
+
+        <!--C3 Chart-->
+        <script src="{{ url('libs/d3/d3.min.js') }}"></script>
+        <script src="{{ url('libs/c3/c3.min.js') }}"></script>
+
+        <script src="{{ url('libs/jquery-knob/jquery.knob.min.js') }}"></script>
+
+        <script src="{{ url('js/front_js/pages/dashboard.init.js') }}"></script>
+
+        <script src="{{ url('js/front_js/app.js') }}"></script>
 
 	</body>
 </html>

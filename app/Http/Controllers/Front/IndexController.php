@@ -33,42 +33,6 @@ class IndexController extends Controller
         return view('front.home.welcome');
     }
 
-    public function shop(){
-        Paginator::useBootstrap();
-        $page_name = "listing";
-
-        $allProducts = Product::where('status',1);
-
-        //check if sort is selected by user
-        if(isset($_GET['sort']) && !empty($_GET['sort'])){
-            if ($_GET['sort'] == "product_latest") {
-                $allProducts->orderBy('id','desc');
-            }
-            if ($_GET['sort'] == "price_lowest") {
-                $allProducts->orderBy('product_price','asc');
-            }
-            if ($_GET['sort'] == "price_highest") {
-                $allProducts->orderBy('product_price','desc');
-            }
-        } else{
-
-        }
-
-        $allProducts =   $allProducts->paginate(3);
-
-        $recentlyViewspdts = Product::where('status',1)->orderBy('created_at', 'asc')->inRandomOrder()->limit(3)->get()->toArray();
-        $topProducts = Product::where('status',1)->inRandomOrder()->limit(3)->get()->toArray();
-
-        return view('front.shop')->with(compact('page_name','topProducts','recentlyViewspdts','allProducts'));
-    }
-
-    public function categories(){
-        $page_name = "categories";
-
-        $categories = Category::with(['section','parentCategory'])->get();
-
-        return view('front.categories.categories')->with(compact('page_name','categories'));
-    }
 
     public function contact(Request $request)
     {

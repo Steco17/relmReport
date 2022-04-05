@@ -28,7 +28,7 @@ class PackagesController extends Controller
     }
 
 
-   public function updatePackagestatus(Request $request){
+    public function updatePackagestatus(Request $request){
     	if ($request->ajax()) {
     		# code...
     		$data = $request->all();
@@ -158,7 +158,7 @@ class PackagesController extends Controller
             }
         }
 
-        
+
         $Package->section_id = $categoryDetails['section_id'];
         $Package->category_id = $data['category_id'];
         $Package->package_name = $data['package_name'];

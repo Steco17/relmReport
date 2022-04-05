@@ -17,7 +17,7 @@ class AdminController extends Controller
 		if ($request->isMethod('post')) {
 			$data = $request->all();
 			//echo "<pre>"; print_r($data); die;
-			
+
 			$rules =[
 		        'email' => 'required|email|max:255',
 		        'password' => 'required',
@@ -72,7 +72,7 @@ class AdminController extends Controller
     }
 
     public function updateCurrentPassword(Request $request){
-    	
+
     	if ($request->isMethod('post')) {
     		$data = $request->all();
     		//echo "<pre>"; print_r($data); die;
@@ -90,7 +90,7 @@ class AdminController extends Controller
     			}
     		} else{
     			Session::flash('error_message','Your current password is not correct');
-    			
+
     		}
     		return redirect()->back();
     	}
@@ -148,4 +148,3 @@ class AdminController extends Controller
     }
 
 }
- 

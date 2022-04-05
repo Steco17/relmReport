@@ -1,170 +1,190 @@
-<header class="header_section sticky text-white clearfix">
-    <div class="header_top clearfix">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-7">
-                    <ul class="header_contact_info ul_li clearfix">
-                        <li><i class="fal fa-envelope"></i> mfuko@gmail.com</li>
-                        <li><i class="fal fa-phone"></i> +237675577785</li>
-                    </ul>
-                </div>
+<header id="page-topbar">
+    <div class="navbar-header">
+        <div class="d-flex">
+            <!-- LOGO -->
+            <div class="navbar-brand-box">
+                <a href="index.html" class="logo logo-dark">
+                    <span class="logo-sm">
+                        <img src="{{ asset('images/front_images//logo.png') }}" alt="" height="22">
+                    </span>
+                    <span class="logo-lg">
+                        <img src="{{ asset('images/front_images//logo-dark.png') }}" alt="" height="17">
+                    </span>
+                </a>
 
-                <div class="col-lg-5">
-                    <ul class="primary_social_links ul_li_right clearfix">
-                        <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#!"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#!"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#!"><i class="fab fa-youtube"></i></a></li>
-                    </ul>
-                </div>
+                <a href="index.html" class="logo logo-light">
+                    <span class="logo-sm">
+                        <img src="{{url('images/front_images/logo.png') }}" alt="" height="22">
+                    </span>
+                    <span class="logo-lg">
+                        <img src="{{url('images/front_images/logo.png') }}" alt="" height="36">
+                    </span>
+                </a>
+            </div>
+
+            <button type="button" class="btn btn-sm px-3 font-size-24 header-item waves-effect" id="vertical-menu-btn">
+                <i class="mdi mdi-menu"></i>
+            </button>
+
+            <div class="d-none d-sm-block ms-2">
+                <h4 class="page-title">Home</h4>
             </div>
         </div>
-    </div>
 
-    <div class="header_bottom clearfix">
-        <div class="container">
-            <div class="row align-items-center">
+        <!-- Search input -->
+        <div class="search-wrap" id="search-wrap">
+            <div class="search-bar">
+                <input class="search-input form-control" placeholder="Search">
+                <a href="#" class="close-search toggle-search" data-target="#search-wrap">
+                    <i class="mdi mdi-close-circle"></i>
+                </a>
+            </div>
+        </div>
 
-                <div class="col-lg-3 col-md-6 col-sm-6 col-6">
-                    <div class="brand_logo">
-                        <a href="index.html">
-                            <img src="{{ asset('images/front_images/logo/logo_01_1x.png') }}" srcset="{{ asset('images/front_images/logo/logo_01_2x.png') }} 2x" alt="logo_not_found">
-                            <img src="{{ asset('images/front_images/logo/logo_02_1x.png') }}" srcset="{{ asset('images/front_images/logo/logo_02_2x.png') }} 2x" alt="logo_not_found">
-                        </a>
-                    </div>
+        <div class="d-flex">
+
+            <div class="dropdown d-none d-lg-inline-block me-2">
+                <button type="button" class="btn header-item toggle-search noti-icon waves-effect" data-target="#search-wrap">
+                    <i class="mdi mdi-magnify"></i>
+                </button>
+            </div>
+
+            <div class="dropdown d-none d-lg-inline-block me-2">
+                <button type="button" class="btn header-item noti-icon waves-effect" data-bs-toggle="fullscreen">
+                    <i class="mdi mdi-fullscreen"></i>
+                </button>
+            </div>
+
+            <div class="dropdown d-none d-md-block me-2">
+                <button type="button" class="btn header-item waves-effect" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="font-size-16"> English </span> <img class="ms-2" src="{{ asset('images/front_images//flags/us_flag.jpg') }}" alt="Header Language" height="16">
+                </button>
+                <div class="dropdown-menu dropdown-menu-end">
+
+                    <!-- item-->
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <img src="{{ asset('images/front_images//flags/germany_flag.jpg') }}" alt="user-image" height="12"> <span class="align-middle"> German </span>
+                    </a>
+
+                    <!-- item-->
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <img src="{{ asset('images/front_images//flags/italy_flag.jpg') }}" alt="user-image" height="12"> <span class="align-middle"> Italian </span>
+                    </a>
+
+                    <!-- item-->
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <img src="{{ asset('images/front_images//flags/french_flag.jpg') }}" alt="user-image" height="12"> <span class="align-middle"> French </span>
+                    </a>
+
+                    <!-- item-->
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <img src="{{ asset('images/front_images//flags/spain_flag.jpg') }}" alt="user-image" height="12"> <span class="align-middle"> Spanish </span>
+                    </a>
+
+                    <!-- item-->
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <img src="{{ asset('images/front_images/flags/russia_flag.jpg') }}" alt="user-image" height="12"> <span class="align-middle"> Russian </span>
+                    </a>
                 </div>
+            </div>
 
-                <div class="col-lg-3 col-md-6 col-sm-6 col-6 order-last">
-                    <ul class="header_action_btns ul_li_right clearfix">
-                        <li>
-                            <button type="button" class="search_btn" data-toggle="collapse" data-target="#collapse_search_body" aria-expanded="false" aria-controls="collapse_search_body">
-                                <i class="fal fa-search"></i>
-                            </button>
-                        </li>
-                        <li class="dropdown">
-                            <!--<button type="button" class="cart_btn" id="cart_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fal fa-shopping-cart"></i>
-                                <span class="cart_counter bg_default_red">3</span>
-                            </button>
-                            <div class="cart_dropdown rotors_dropdown dropdown-menu" aria-labelledby="cart_dropdown">
-                                <h4 class="wrap_title">Cart Items: (3)</h4>
-                                <ul class="cart_items_list ul_li_block clearfix">
-                                    <li>
-                                        <div class="item_image">
-                                            <img src="{{ asset('images/front_images/cart/img_2.png') }}" alt="image_not_found">
-                                        </div>
-                                        <div class="item_content">
-                                            <h4 class="item_title">Digital Infrared Thermometer</h4>
-                                            <span class="item_price">$39.50</span>
-                                        </div>
-                                        <button type="button" class="remove_btn"><i class="fal fa-times"></i></button>
-                                    </li>
-
-                                    <li>
-                                        <div class="item_image">
-                                            <img src="{{ asset('images/front_images/cart/img_2.png') }}" alt="image_not_found">
-                                        </div>
-                                        <div class="item_content">
-                                            <h4 class="item_title">Digital Infrared Thermometer</h4>
-                                            <span class="item_price">$39.50</span>
-                                        </div>
-                                        <button type="button" class="remove_btn"><i class="fal fa-times"></i></button>
-                                    </li>
-
-                                    <li>
-                                        <div class="item_image">
-                                            <img src="{{ asset('images/front_images/cart/img_2.png') }}" alt="image_not_found">
-                                        </div>
-                                        <div class="item_content">
-                                            <h4 class="item_title">Digital Infrared Thermometer</h4>
-                                            <span class="item_price">$39.50</span>
-                                        </div>
-                                        <button type="button" class="remove_btn"><i class="fal fa-times"></i></button>
-                                    </li>
-                                </ul>
-                                <ul class="btns_group ul_li_block clearfix">
-                                    <li><a href="cart.html" class="custom_btn bg_default_red text-uppercase">View Cart <img src="{{ asset('images/front_images/icons/icon_01.png') }}" alt="icon_not_found"></a></li>
-                                    <li><a href="#!" class="custom_btn bg_default_black text-uppercase">Checkout <img src="{{ asset('images/front_images/icons/icon_01.png') }}" alt="icon_not_found"></a></li>
-                                </ul>
+            <div class="dropdown d-inline-block me-2">
+                <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="ion ion-md-notifications"></i>
+                    <span class="badge bg-danger rounded-pill">3</span>
+                </button>
+                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="page-header-notifications-dropdown">
+                    <div class="p-3">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h5 class="m-0 font-size-16"> Notification (3) </h5>
                             </div>
-                        </li>-->
-                        @if(Auth::check())
-                            <li class="dropdown">
-                                <button type="button" class="user_btn" id="user_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fal fa-user"></i>
-                                </button>
-                                <div class="user_dropdown rotors_dropdown dropdown-menu clearfix" aria-labelledby="user_dropdown">
-                                    <div class="profile_info clearfix">
-                                        <a href="#!" class="user_thumbnail">
-                                            @if (isset(Auth::guard('web')->user()->image))
-                                                <?php $profile_image_path = 'images/front_images/user_photos/'.Auth::guard('web')->user()->image; ?>
-                                            @else
-                                                <?php $profile_image_path = ' '; ?>
-                                            @endif
-
-                                            @if ($profile_image_path!= ''&&file_exists($profile_image_path))
-                                                <img src="{{ asset($profile_image_path) }}"  alt="">
-                                            @else
-                                                <img src="{{ asset('images/default_image.png') }}" alt="thumbnail_not_found">
-                                            @endif
-                                        </a>
-                                        <div class="user_content">
-                                            <h4 class="user_name"><a href="{{ url('/account') }}">{{ Auth::guard('web')->user()->name }},{{Auth::guard('web')->user()->image }}</a></h4>
-                                            <span class="user_title">Premium Sender</span>
-                                        </div>
-                                    </div>
-                                    <ul class="ul_li_block clearfix">
-                                        <li><a href="{{ url('/account') }}"><i class="fal fa-user-circle"></i> Profile</a></li>
-                                        <li><a href="{{ url('/logout') }}"><i class="fal fa-sign-out"></i> Logout</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                        @else
-                            <li class="dropdown">
-                                <a href="{{ url('/login-register') }}" style="color: white">
-                                    Login
-                                </a>
-                            </li>
-                        @endif
-                        <li>
-                            <button type="button" class="mobile_sidebar_btn"><i class="fal fa-align-right"></i></button>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-6 col-md-12">
-                    <nav class="main_menu clearfix">
-                        <ul class="ul_li_center clearfix">
-                            <li class="active has_child">
-                                <a href="{{ url('/') }}">Home</a>
-
-                            </li>
-                            <!--<li><a href="gallery.html">Our Cars</a></li>
-                            <li><a href="review.html">Reviews</a></li>-->
-                            <li><a href="about.html">About</a></li>
-
-                            <li class="has_child">
-                                <a href="{{ url('/contact_us') }}">Contact Us</a>
-
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div id="collapse_search_body" class="collapse_search_body collapse">
-        <div class="search_body">
-            <div class="container">
-                <form action="#">
-                    <div class="form_item">
-                        <input type="search" name="search" placeholder="Type here...">
-                        <button type="submit"><i class="fal fa-search"></i></button>
+                        </div>
                     </div>
-                </form>
+                    <div data-simplebar style="max-height: 230px;">
+                        <a href="" class="text-reset notification-item">
+                            <div class="d-flex">
+                                <div class="avatar-xs me-3">
+                                    <span class="avatar-title bg-success rounded-circle font-size-16">
+                                        <i class="mdi mdi-cart-outline"></i>
+                                    </span>
+                                </div>
+                                <div class="flex-1">
+                                    <h6 class="mt-0 font-size-15 mb-1">Your order is placed</h6>
+                                    <div class="font-size-12 text-muted">
+                                        <p class="mb-1">Dummy text of the printing and typesetting industry.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="" class="text-reset notification-item">
+                            <div class="d-flex">
+                                <div class="avatar-xs me-3">
+                                    <span class="avatar-title bg-warning rounded-circle font-size-16">
+                                        <i class="mdi mdi-message-text-outline"></i>
+                                    </span>
+                                </div>
+                                <div class="flex-1">
+                                    <h6 class="mt-0 font-size-15 mb-1">New Message received</h6>
+                                    <div class="font-size-12 text-muted">
+                                        <p class="mb-1">You have 87 unread messages</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="" class="text-reset notification-item">
+                            <div class="d-flex">
+                                <div class="avatar-xs me-3">
+                                    <span class="avatar-title bg-info rounded-circle font-size-16">
+                                        <i class="mdi mdi-glass-cocktail"></i>
+                                    </span>
+                                </div>
+                                <div class="flex-1">
+                                    <h6 class="mt-0 font-size-15 mb-1">Your item is shipped</h6>
+                                    <div class="font-size-12 text-muted">
+                                        <p class="mb-1">It is a long established fact that a reader will</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                    <div class="p-2 border-top">
+                        <div class="d-grid">
+                            <a class="btn btn-sm btn-link font-size-14  text-center" href="javascript:void(0)">
+                                View all
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <div class="dropdown d-inline-block">
+                <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <?php $user_image_path = 'images/user_images/small/'.Auth::guard('web')->user()->image ?>
+                    @if (!empty('images/user_images/small/'.Auth::guard('web')->user()->image)&&file_exists($user_image_path))
+                        <img  class="rounded-circle header-profile-user" src="{{ asset($user_image_path) }}"  alt="Header Avatar">
+                    @else
+                        <img class="rounded-circle header-profile-user" data-src="{{ asset('images/default_image.png') }}" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Header Avatar">
+                    </button>
+                    @endif
+                </button>
+                <div class="dropdown-menu dropdown-menu-end">
+                    <!-- item-->
+                    <a class="dropdown-item" href="#">Profile</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item text-danger" href="{{ url('/logout') }}">Logout</a>
+                </div>
+            </div>
+
+            <div class="dropdown d-inline-block">
+                <button type="button" class="btn header-item noti-icon right-bar-toggle waves-effect">
+                    <i class="mdi mdi-spin mdi-cog"></i>
+                </button>
+            </div>
+
         </div>
     </div>
 </header>

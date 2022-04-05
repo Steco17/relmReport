@@ -21,20 +21,20 @@ $(document).ready(function() {
         })
     });
 
-    $(".updateSectionStatus").click(function() {
+    $(".updateUserstatus").click(function() {
         var status = $(this).text();
-        var section_id = $(this).attr('section_id');
+        var user_id = $(this).attr('user_id');
         $.ajax({
             type: 'post',
-            url: '/admin/update-section-status',
-            data: { status: status, section_id: section_id },
+            url: '/admin/update-user-status',
+            data: { status: status, user_id: user_id },
             success: function(resp) {
                 //  alert(resp['status']);
                 //   alert(resp['section_id']);
                 if (resp['status'] == 0) {
-                    $("#section-" + section_id).html("<a class='updateSectionStatus' href='javascript:void(0)'>Inactive</a");
+                    $("#user-" + user_id).html("<a class='updateUserstatus' href='javascript:void(0)'>Inactive</a");
                 } else if (resp['status'] == 1) {
-                    $("#section-" + section_id).html("<a class='updateSectionStatus' href='javascript:void(0)'>Active</a");
+                    $("#user-" + user_id).html("<a class='updateUserstatus' href='javascript:void(0)'>Active</a");
                 }
             },
             error: function(error) {
@@ -67,27 +67,6 @@ $(document).ready(function() {
             }
         })
 
-    });
-
-    ///Append category Level
-    $('#section_id').change(function() {
-        var section_id = $(this).val();
-        //alert(section_id);
-        $.ajax({
-            type: 'post',
-            url: '/admin/append-categories-level',
-            data: { section_id: section_id },
-            success: function(resp) {
-                // body...
-                console.log(resp);
-                $("#appendCategoriesLevel").html(resp);
-            },
-            error: function() {
-                // body...
-                alert('error');
-            }
-
-        });
     });
 
     /* //confirm deletion of record

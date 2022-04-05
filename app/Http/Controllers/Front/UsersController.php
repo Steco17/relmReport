@@ -9,7 +9,6 @@ use Illuminate\Http\Request;
 use App\User;
 use Session;
 use Auth;
-use App\Sms;
 use Image;
 use App\Country;
 
